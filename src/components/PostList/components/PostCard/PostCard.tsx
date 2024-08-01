@@ -13,7 +13,7 @@ const PostCard: FC<IPost> = ({ id, title, body }) => {
   const [commentList, setCommentList] = useState<IComment[]>([])
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
-  const handleCardClick = (event: MouseEvent<HTMLDivElement>): void => {
+  const handleCardClick = (event: MouseEvent<HTMLLIElement>): void => {
     ;(async () => {
       event.stopPropagation()
 
@@ -29,7 +29,7 @@ const PostCard: FC<IPost> = ({ id, title, body }) => {
   }
 
   return (
-    <div
+    <li
       className={styles.wrapper}
       onClick={handleCardClick}
     >
@@ -55,7 +55,7 @@ const PostCard: FC<IPost> = ({ id, title, body }) => {
           <CommentList commentList={commentList} />
         </div>
       ) : null}
-    </div>
+    </li>
   )
 }
 

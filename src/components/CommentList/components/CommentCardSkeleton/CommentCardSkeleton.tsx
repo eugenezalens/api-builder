@@ -6,7 +6,7 @@ import styles from './CommentCardSkeleton.module.css'
 
 const CommentCardSkeleton: FC = () => {
   return (
-    <div className={styles.wrapper}>
+    <li className={styles.wrapper}>
       <div className={styles.header} />
 
       <div>
@@ -17,7 +17,7 @@ const CommentCardSkeleton: FC = () => {
       <div className={styles.footer}>
         <Skeleton width={'50%'} />
       </div>
-    </div>
+    </li>
   )
 }
 

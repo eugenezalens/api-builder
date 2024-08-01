@@ -6,7 +6,7 @@ import styles from './PostCardSkeleton.module.css'
 
 const PostCardSkeleton: FC = () => {
   return (
-    <div className={styles.wrapper}>
+    <li className={styles.wrapper}>
       <div className={styles.header}>
         <Skeleton width={'65%'} />
       </div>
@@ -17,7 +17,7 @@ const PostCardSkeleton: FC = () => {
       </div>
 
       <div></div>
-    </div>
+    </li>
   )
 }
 
